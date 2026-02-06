@@ -21,6 +21,24 @@
                  - Contains input fields for: name, favorite_color, feedback
                  - Has a submit button
             -->
+            <form action="/submit-ssr" method="post">
+                <div class="form-group">
+                    <label for="name-ssr">Name:</label>
+                    <input type="text" id="name-ssr" name="name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="color-ssr">Favorite Color:</label>
+                    <input type="text" id="color-ssr" name="favorite_color" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="fb-ssr">Feedback:</label>
+                    <textarea id="fb-ssr" name="feedback" rows="3" required></textarea>
+                </div>
+                <br>
+                <button type="submit">Submit (SSR)</button>
+            </form>
 
             <!-- SSR Result displays here after form submission (page reloads) -->
             {% if ssr_result %}
@@ -43,6 +61,24 @@
                  - Contains input fields for: name, favorite_color, feedback
                  - Has a submit button
             -->
+            <form id="api-form">
+                <div class="form-group">
+                    <label for="name-api">Name:</label>
+                    <input type="text" id="name-api" name="name-api" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="color-api">Favorite Color:</label>
+                    <input type="text" id="color-api" name="color-api" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="fb-api">Feedback:</label>
+                    <textarea id="fb-api" name="fb-api" rows="3" required></textarea>
+                </div>
+                <br>
+                <button type="submit">Submit (fetch)</button>
+            </form>
 
             <!-- Result displays here without page reload -->
             <div id="api-result" class="result" style="display: none;">
